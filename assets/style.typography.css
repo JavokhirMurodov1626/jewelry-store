@@ -1,0 +1,98 @@
+:root {
+    --color-primary: #000;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 130%;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 143%;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase
+}
+
+h4 {
+    font-size: 16px;
+    line-height: 168%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-family: 'oswald';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 168%;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+h6 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.165em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+p ,.p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 167.5%;
+}
+
+.p-small {
+    font-size: 12px;
+}
+
+@media screen and (max-width:1440px) {
+    h1 {
+        font-size: 5.2rem;
+    }
+
+    h2 {
+        font-size: 3.6rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+    }
+}

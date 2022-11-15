@@ -32,6 +32,25 @@
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
+    <style>
+    @font-face {
+      font-family: "new-republic";
+      src:local("new-republic"),
+      url('{{"sfnewrepublic-webfont.woff2" | asset_url }}') format("woff2"),
+      url("{{'sfnewrepublic-webfont.woff' | asset_url }}") format('woff');
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: "minion-pro";
+      src:local('minion-pro'),
+     url('{{"minionpro-regular-webfont.woff2" | asset_url }}') format("woff2"),
+      url("{{'minionpro-regular-webfont.woff' | asset_url }}") format('woff');
+      font-style: normal;
+      font-weight: normal;
+    }
+  </style>
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'

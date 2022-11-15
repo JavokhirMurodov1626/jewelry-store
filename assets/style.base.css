@@ -1,0 +1,58 @@
+:root {
+    --color-primary-dark: #0000;
+    --color-primary-white:#fff;
+    --color-primary-gold:#C2A578;
+    --color-secondary-text-grey:#767676;
+    --color-secondary-grey:#C4C4C4;
+    --color-secondary-light-grey:#8F8F8F;
+    --color-functional-red:#DA0000;
+    --color-functional-green:#6FCF97;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'open-sans', sans-serif;
+    font-style: normal;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4, 
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
