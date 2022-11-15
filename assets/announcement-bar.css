@@ -1,0 +1,17 @@
+.announcement-bar-swiper {
+    background-color: var(--color-primary-dark);
+    height: 5rem;
+}
+.announcement-bar-swiper .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.announcement-bar-swiper .swiper-slide a {
+    font-family: 'minion-pro';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: var(--color-primary-light-pink);
+}
