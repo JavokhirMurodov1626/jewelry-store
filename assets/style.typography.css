@@ -1,36 +1,43 @@
-:root {
-    --color-primary: #000;
-}
-
-h1 {
-    font-weight: bold;
-    font-size: 60px;
-    line-height: 130%;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-}
-
-h2 {
+h1, .h1{
+    font-family: 'new-republic';
     font-weight: 700;
-    font-size: 40px;
-    line-height: 143%;
-    letter-spacing: 0.18em;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+h2,.h2 {
+    font-family: 'new-republic';
+ 
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+
+    letter-spacing: 0.15em;
     text-transform: uppercase;
 
 }
 
-h3 {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 130%;
-    letter-spacing: 0.08em;
-    text-transform: uppercase
+h3,.h3 {
+    font-family: 'new-republic';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    
 }
 
-h4 {
-    font-size: 16px;
-    line-height: 168%;
-    letter-spacing: 0.1em;
+h4,
+.h4 {
+    font-family: 'new-republic';
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+
+    letter-spacing: 0.15em;
     text-transform: uppercase;
 }
 
@@ -55,16 +62,16 @@ h6 {
     color: var(--color-primary);
 }
 
-p ,.p {
+p,
+.p {
+    font-family: 'minion-pro';
     font-weight: 400;
-    font-size: 14px;
-    line-height: 167.5%;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
 }
 
-.p-small {
-    font-size: 12px;
-}
-
+/* 
 @media screen and (max-width:1440px) {
     h1 {
         font-size: 5.2rem;
@@ -95,4 +102,4 @@ p ,.p {
     h4 {
         font-size: 1.4rem;
     }
-}
+} */
