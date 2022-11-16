@@ -1,0 +1,35 @@
+<div class="image_banner_empty">
+    <div class="container">
+
+    </div>
+</div>
+
+<style>
+
+    .image_banner_empty .container{
+        height: 25.4rem;
+        background-image: url("{{ section.settings.banner_img | img_url:'2000x' }}");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width:100%;
+        padding: 50px;
+    }
+    .image_banner_empty img{
+        width:100%;
+    }
+</style>
+
+
+{% schema %}
+{
+  "name": "Empty Banner",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_img",
+      "label": "Section Image"
+    }
+  ]
+}
+{% endschema %}

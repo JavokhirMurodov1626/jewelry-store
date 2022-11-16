@@ -1,0 +1,64 @@
+{{ 'main-products-grid.css' | asset_url | stylesheet_tag }}  
+
+
+<div class="main-products-grid">
+    <div class="container">
+        <div class="grid">
+                <h2 class="title">{{section.settings.title}}</h2>
+                {% assign count = 0 %}
+                {% for product in collections['new-collection'].products %}
+                   
+                    {% if product.type=="rings" and count < 4 %}
+                        {% assign count = count | plus:1 %}
+                        
+                        <div class="main__product-card">
+                            <div class="product-img__wrap">
+                                <img src="{{ product.featured_image | img_url:'500x' }}" alt="the picture of earring">
+                            </div>
+                            <div class="product-content">
+                                <h3 class="product__title">{{product.title}}</h3>
+                                <h4 class="product__price">{{product.price}}</h4>
+                                <h4 class="product__tag">
+                                    {{product.tags[0]}}
+                                </h4>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                
+               
+        </div>
+        <div class="button-wrap">
+            {% render 'button-primary', title:{{section.settings.button_label}} %}
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .main__product-card{
+        background-image:url("{{ 'background-shape.svg' | asset_url }}");
+        background-repeat: no-repeat;
+        background-size:contain;
+        background-position: center;
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Products from collection",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label"
+    }
+  ]
+}
+{% endschema %}

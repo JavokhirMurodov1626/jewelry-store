@@ -1,0 +1,87 @@
+{{ 'main-featured-collection.css' | asset_url | stylesheet_tag }}
+<div class="main-featured-colleciton">
+    <div class="container">
+        <div class="outer-frame">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+            <span class="line line-4"></span>
+
+            <div class="inner-frame">
+
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                        {% when 'frame_image' %}
+                        <div class="inner-frame__left">
+                            <div class="frame-img__wrap">
+                                <img src="{{ block.settings.frame_image | img_url:'500x' }}" alt="">
+                            </div>
+                        </div>
+                        {% when 'frame_content' %}
+                            <div class="inner-frame__right">
+                                <div class="frame-content">
+                                    <h2 class="frame__title">{{block.settings.frame_title}}</h2>
+                                    <p class="frame__text">
+                                        {{block.settings.frame_text}}
+                                    </p>
+                                    <div class="frame__button">
+                                        {% render 'button-primary', title:{{block.settings.frame_button_label,link:{{block.settings.frame_button_url}}}} %}
+                                    </div>
+                                </div>
+                            </div>
+                    {% endcase %}
+                {% endfor %}
+
+                
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "tag": "section",
+  "max_blocks": 2,
+  "blocks": [
+     {
+       "name": "Frame Image",
+       "type": "frame_image",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "frame_image",
+           "label": "Frame Image"
+         }
+       ]
+     },
+     {
+       "name": "Frame Content",
+       "type": "frame_content",
+       "settings": [
+         {
+           "type": "text",
+           "id": "frame_title",
+           "label": "Frame Title"
+         },
+         {
+           "type": "text",
+           "id": "frame_text",
+           "label": "Frame Text"
+         },
+         {
+           "type": "text",
+           "id": "frame_button_label",
+           "label": "Frame Button Label"
+         },
+         {
+           "type": "url",
+           "id": "frame_button_url",
+           "label": "Frame Button Link"
+         }
+       ]
+     }
+  ]
+}
+{% endschema %}
