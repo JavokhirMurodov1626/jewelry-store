@@ -49,14 +49,16 @@
     },
     "featured-collection":{
       "type":"main-featured-collection"
+    },
+    "main-sign-up-section":{
+      "type":"main-sign-up-section"
     }
-   
-
   },
   "order": [
     "image_banner",
     "main-products-grid",
     "image_banner_empty",
-    "featured-collection"
+    "featured-collection",
+    "main-sign-up-section"
   ]
 }

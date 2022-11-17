@@ -52,14 +52,14 @@ h5 {
     color: var(--color-primary);
 }
 
-h6 {
+h6,.h6 {
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.165em;
+    line-height: 18px;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-primary);
+
 }
 
 p,

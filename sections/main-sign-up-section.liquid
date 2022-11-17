@@ -1,0 +1,58 @@
+{{ 'main-sign-up-section.css' | asset_url | stylesheet_tag }}
+
+<div class="sign-up-section">
+    <div class="container">
+        <div class="section__form">
+            <form >
+                <label for="email" class="form-label h2">{{ section.settings.form_label }}</label>
+                <input class="h2" type="email" id="email" placeholder="{{ section.settings.form_placeholder }}">
+                <div class="form-button">
+                    {% render "button-primary", title:{{section.settings.form_button_label}}, link: {{section.settings.form_button_url}} %}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .sign-up-section{
+        background-image: url("{{ section.settings.section_bg_img | img_url:'1000x' }}");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Sign Up Section",
+  "tag": "section",
+  "settings": [
+  {
+    "type": "image_picker",
+    "id": "section_bg_img",
+    "label": "Sign Up Background Image"
+  },
+  {
+    "type": "text",
+    "id": "form_label",
+    "label": "Sign Up Form Label"
+  },
+  {
+    "type": "text",
+    "id": "form_placeholder",
+    "label": "Sign Up Form Placeholder Text"
+  },
+  {
+    "type": "text",
+    "id": "form_button_label",
+    "label": "Sign Up Form Button Label"
+  },
+  {
+    "type": "url",
+    "id": "form_button_url",
+    "label": "Sign Up Form Button Link"
+  }
+]
+}
+{% endschema %}

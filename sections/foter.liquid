@@ -1,0 +1,79 @@
+{{ 'footer.css' | asset_url | stylesheet_tag }}
+
+<div class="footer">
+    <div class="container">
+        
+        {{ link.title | link_to: link.url }}
+      
+            <ul class="footer__left footer-link-items">
+                {% for link in linklists.footer-product-types-menu.links %}
+                <li class="footer-link-item">
+                    <a href="{{ link.url }}" class="footer-link h4">{{ link.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <div class="footer__center">
+                <div class="footer__logo-wrap">
+                    <img src="{{ section.settings.footer_logo | img_url:'500x' }}" alt="" class="footer__logo">
+                </div>
+            </div>
+
+            <ul class="footer__right footer-link-items">
+                {% for link in linklists.footer-menu.links%}
+                <li class="footer-link-item">
+                    <a href="{{ link.url }}" class="footer-link h4">{{ link.title }}</a>
+                </li>
+                {% endfor %}
+                <li class="footer-link-item">
+                    <img src="{{ section.settings.social_icon | img_url:'50x' }}" alt="instagram icon">
+                 </li>
+            </ul>
+
+           
+                <ul class="footer__bottom footer-link-items">
+                    <li class="footer__bottom__item h6">
+                        1234 Placeholder St. New York, NY
+                    </li>
+                    <li class="footer__bottom__item h6">
+                        Privacy Policy
+                    </li>
+                    <li class="footer__bottom__item h6">
+                        © 2022 D.Gregory
+                    </li>
+                    
+                </ul>
+            
+
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "section",
+  "settings": [
+  {
+    "type": "image_picker",
+    "id": "footer_logo",
+    "label": "Footer Logo"
+  },
+  {
+    "type": "image_picker",
+    "id": "social_icon",
+    "label": "Social Media Icon"
+  },
+  {
+    "type": "link_list",
+    "id": "product_type_menu",
+    "label": "Product Types Menu"
+  },
+  {
+    "type": "link_list",
+    "id": "footer_menu",
+    "label": "Footer Menu"
+  }
+  
+]
+}
+{% endschema %}
