@@ -1,5 +1,8 @@
 .footer{
     width:100%;
+    background-color:var(--color-secondary-light-orange);
+    border-top: 1px solid var(--color-primary-dark);
+
 }
 .footer .container{
     display: grid;
@@ -7,6 +10,8 @@
     grid-template-rows: repeat(2, auto);
     column-gap: 1px;
     background-color: var(--color-primary-dark);
+    /* border-right: 1px solid var(--color-primary-dark);
+    border-left: 1px solid var(--color-primary-dark); */
 }
 
 .footer__bottom{
