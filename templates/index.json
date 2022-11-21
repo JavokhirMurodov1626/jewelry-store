@@ -74,9 +74,10 @@
     "main-sign-up-section": {
       "type": "main-sign-up-section",
       "settings": {
-        "form_label": "",
-        "form_placeholder": "",
-        "form_button_label": "",
+        "section_bg_img": "shopify:\/\/shop_images\/BackgroundImage-1_3_1.png",
+        "form_label": "Lorem ipsum dolor sit amet consectetur adipiscing.",
+        "form_placeholder": "Enter your Email",
+        "form_button_label": "Sign up",
         "form_button_url": ""
       }
     }
