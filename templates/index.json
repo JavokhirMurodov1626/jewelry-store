@@ -6,52 +6,57 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Amet.",
             "heading_size": "h0"
           }
         },
-       
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_label": "Button label",
+            "button_link": ""
           }
         }
       },
       "block_order": [
         "heading",
-        "text",
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "adapt_height_first_image": false,
+        "image": "shopify:\/\/shop_images\/BackgroundImage-1_1.png",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
     },
     "main-products-grid": {
-      "type": "main-products-grid"
+      "type": "main-products-grid",
+      "settings": {
+        "title": "",
+        "button_label": ""
+      }
     },
-    "image_banner_empty":{
-      "type":"image-banner-empty"
+    "image_banner_empty": {
+      "type": "image-banner-empty",
+      "settings": {
+      }
     },
-    "featured-collection":{
-      "type":"main-featured-collection"
+    "featured-collection": {
+      "type": "main-featured-collection",
+      "settings": {
+      }
     },
-    "main-sign-up-section":{
-      "type":"main-sign-up-section"
+    "main-sign-up-section": {
+      "type": "main-sign-up-section",
+      "settings": {
+        "form_label": "",
+        "form_placeholder": "",
+        "form_button_label": "",
+        "form_button_url": ""
+      }
     }
   },
   "order": [
