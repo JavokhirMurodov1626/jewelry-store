@@ -1,0 +1,22 @@
+.product-followed-section{
+    width: 100%;
+}
+.product-followed-section .container{
+    padding: 10rem 15rem;
+    display: flex;
+}
+
+.product-followed-section .section__banner-img{
+    background-color: orange;
+    width: 50%;
+
+}
+.product-followed-section .section__content{
+    background-color: var(--color-secondary-light-orange);
+    width: 50%;
+    padding: 7.6rem 7rem 0 7rem;
+    text-align: center;
+}
+.product-followed-section .section__content h2{
+    margin-bottom: 2rem;
+}

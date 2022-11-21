@@ -1,0 +1,33 @@
+{{ 'product-followed-section.css' | asset_url | stylesheet_tag }}
+
+<div class="product-followed-section">
+    <div class="container">
+
+        <div class="section__banner-img">
+            {% for image in product.metafields.accentuate.followed_section_banner %}
+             <img src="{{ image.src }}" alt="{{ image.alt }}"/>
+            {% endfor %}
+        </div>
+        <div class="section__content">
+            {{product.metafields.accentuate.followed_section_content}}
+        </div>
+    </div>
+</div>
+
+<style>
+    .product-followed-section{
+        background-image: url('{{ section.settings.section_bg_img | img_url:"1000x" }}');
+    }
+</style>
+{% schema %}
+{
+  "name": "Product Followed Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "section_bg_img",
+      "label": "Product Followed Section Bacground Image"
+    }
+  ]
+}
+{% endschema %}
