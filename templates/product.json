@@ -1,13 +1,20 @@
 {
   "sections": {
     "main": {
-      "type": "main-product"
+      "type": "main-product",
+      "settings": {
+      }
     },
     "product-followed-section": {
-      "type": "section-product-followed"
+      "type": "section-product-followed",
+      "settings": {
+      }
     },
     "product-recommandations": {
-      "type": "product-recommandations"
+      "type": "product-recommandations",
+      "settings": {
+        "title": "you might also like"
+      }
     }
   },
   "order": [
