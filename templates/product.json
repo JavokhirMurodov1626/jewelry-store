@@ -5,10 +5,14 @@
     },
     "product-followed-section": {
       "type": "section-product-followed"
+    },
+    "product-recommandations": {
+      "type": "product-recommandations"
     }
   },
   "order": [
     "main",
-    "product-followed-section"
+    "product-followed-section",
+    "product-recommandations"
   ]
 }

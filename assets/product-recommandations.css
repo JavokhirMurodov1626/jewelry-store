@@ -1,0 +1,43 @@
+.product-recommandations{
+    width: 100%;
+    background-color: var( --color-primary-light-pink);
+
+}
+.product-recommandations .container{
+    padding: 6rem 15rem 8rem 15rem;
+}
+.product-recommandations .container .section-main{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:4rem;
+}
+
+.main__product-card{
+    position: relative;
+}
+
+
+.product-img__wrap img{
+    border-radius:90% 90% 0 0;
+    margin-top: 4.5rem;
+}
+.product-content{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    text-align: center;
+}
+.product__title{
+    margin-bottom: 0.4rem;
+}
+.product__price{
+    margin-bottom: 1rem;
+}
+.product__tag{
+    color: var( --color-secondary-pink);
+}
+
+.product-recommandations .section-title{
+    text-align: center;
+    margin-bottom: 4.4rem;
+}

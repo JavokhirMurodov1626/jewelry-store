@@ -1,0 +1,49 @@
+{{ 'product-recommandations.css' | asset_url | stylesheet_tag }}
+
+<div class="product-recommandations">
+    <div class="container">
+        <h2 class="section-title">You might also like{{section.settings.title}}</h2>
+        <div class="section-main">
+            {% assign selected_handles = product.metafields.accentuate.recommended_product | split: '|' %}
+            {% for selected_handle in selected_handles %}
+            <div class="main__product-card">
+                <div class="product-img__wrap">
+                    <img src="{{ all_products[selected_handle].featured_image | img_url:'500x' }}"
+                        alt="the picture of earring">
+                </div>
+                <div class="product-content">
+                    <h3 class="product__title">{{all_products[selected_handle].title}}</h3>
+                    <h4 class="product__price">{{all_products[selected_handle].price | money}}</h4>
+                    <h4 class="product__tag">
+                        {{all_products[selected_handle].tags[0]}}
+                    </h4>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+<style>
+    .main__product-card {
+        background-image:url("{{ 'background-shape.svg' | asset_url }}");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+</style>
+
+
+{% schema %}
+{
+"name": "Product recommandations",
+"tag": "section",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Section Title"
+}
+]
+}
+{% endschema %}
