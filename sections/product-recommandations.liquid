@@ -2,7 +2,7 @@
 
 <div class="product-recommandations">
     <div class="container">
-        <h2 class="section-title">You might also like{{section.settings.title}}</h2>
+        <h2 class="section-title">{{section.settings.title}}</h2>
         <div class="section-main">
             {% assign selected_handles = product.metafields.accentuate.recommended_product | split: '|' %}
             {% for selected_handle in selected_handles %}
