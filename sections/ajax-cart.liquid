@@ -1,0 +1,226 @@
+
+<section class="ajax-cart">
+    <div class="cart-header">
+        <h3>My Cart</h3>
+        <div id="cart-close" class="cancel-btn">
+            {% render 'icon-close' %}
+        </div>
+    </div>
+    
+    <div class="cart-body">
+        <div class="cart-empty-container">
+            <p>Your cart is empty</p>
+            <a href="#" class="button">Shop best sellers</a>
+        </div>
+        <div class="cart-items">
+            <div class="cart-item">
+                <div class="cart-item__img">
+                    <img src="" alt="">
+                </div>
+                <div class="cart-item__content">
+                    <h4 class="cart-item__title">
+                        Button Ruby
+                    </h4>
+                    <p class="cart-item__price">
+                        12.00
+                    </p>
+                    <p class="remove-btn cart-item-cancel">
+                        remove
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-suggestions">
+
+        </div>
+    </div> 
+
+    <div class="cart-footer">
+        <div class="cart-footer__subtotal">
+            <h4>subtotal</h4>
+            <h4 class="side-cart__total-price"></h4>
+        </div>
+        <p class="cart-footer__message">
+            Tax and shipping calculates at checkout.
+        </p>
+
+        <div class="checkout-btn">
+            {% render 'button-primary', title:'checkout' %}
+        </div>
+    </div>
+</section>
+
+<style>
+    .ajax-cart {
+        position: fixed;
+        z-index: 998;
+        top: 0;
+        right: -100%;
+        background-color: var( --color-secondary-light-orange);
+        display: flex;
+        flex-direction: column;
+        width: 58.3rem;
+        height: 100vh;
+        transition: all .3s ease-in-out;
+        padding: 5rem 8.7rem;
+    }
+
+    .background-overlay {
+        position: fixed;
+        z-index: 10;
+        inset: 0;
+        opacity: 0.6;
+        background-color: #fff;
+        display: none;
+        transition: display 0s, .3s ease-in-out;
+    }
+
+    .background-overlay--show {
+        display: block;
+    }
+
+    .ajax-cart-active {
+        right: 0;
+    }
+    
+    .ajax-cart .cart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.5rem;
+        padding: 2.4rem 2.4rem 0 2.4rem;
+    }
+
+    .cancel-btn {
+        width: 1.6rem;
+        height: 1.6rem;
+        cursor: pointer;
+    }
+
+    .ajax-cart .cancel-btn svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cart-empty-container {
+        vertical-align: middle;
+        height: 100%;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cart-empty-container p {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    .cart-empty-container-active{
+        display: flex;
+    }
+    .cart-empty-container a {
+        width: 100%;
+        max-width: 442px;
+        margin: 0 auto;
+        padding: 1rem 2.5rem;
+        outline: none;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 0;
+        transition: background-color .2s ease;
+        border: 1px solid black;
+        opacity: 1 !important;
+        position: relative;
+        font-style: normal;
+        color: #000;
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.28rem;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .cart-empty-container a:hover {
+        color: #fff;
+        background-color: #000;
+    }
+    .cart-body {
+        overflow-y: scroll;
+        height: 100%;
+    }
+
+    .cart-body::-webkit-scrollbar {
+        position: absolute;
+        z-index: 1;
+        right: 1.6rem;
+        width: 4px;
+        border-radius: 92px;
+        margin-left: 16px !important;
+    }
+
+    .cart-body::-webkit-scrollbar-track {
+        background: #F1F1F1;
+    }
+
+    .cart-body::-webkit-scrollbar-thumb {
+        background: #353535;
+        border-radius: 92px;
+    }
+
+    .cart-item {
+        display: flex;
+        gap: 3rem;
+        margin-bottom: 1rem;
+
+    }
+
+    .cart-item__img {
+        width: 19rem;
+        height: 19rem;
+        background-color: brown;
+    }
+
+    .cart-item__content {
+        flex: 1;
+        padding: 0 1.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+  
+    }
+    .cart-item__name {
+        margin-bottom: 0.8rem;
+
+    }
+
+    .cart-item__variant {
+        margin-bottom: 0.8rem;
+    }
+
+.cart-item-cancel{
+    text-decoration: underline;
+}
+
+    .cart-footer {
+        margin-top: auto;
+        padding: 0 2.4rem;
+        text-align: center;
+    }
+
+    .cart-footer__subtotal {
+        display: flex;
+        justify-content: start;
+        margin-bottom: 1.1rem;
+    }
+
+    .cart-footer__message {
+        margin-bottom: 1.76rem;
+    }
+    .cart-footer .button--primary{
+        background-color: #000;
+        color: #fff;
+    }
+</style>
+

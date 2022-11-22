@@ -50,3 +50,6 @@
     line-height: 20px;
     color: var(--color-primary-white);
 }
+.header .cart-icon{
+    cursor:pointer;
+}
