@@ -208,6 +208,8 @@
       "foter": {
         "type": "foter",
         "settings": {
+          "footer_logo": "shopify:\/\/shop_images\/Vector_1_bd2a2028-c899-4d0c-b398-39f96e44fa4b.png",
+          "social_icon": "shopify:\/\/shop_images\/Vector_2.png",
           "product_type_menu": "",
           "footer_menu": ""
         }
