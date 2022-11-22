@@ -14,7 +14,7 @@
     "product-recommandations": {
       "type": "product-recommandations",
       "settings": {
-        "title": ""
+        "title": "products you might like"
       }
     }
   },
