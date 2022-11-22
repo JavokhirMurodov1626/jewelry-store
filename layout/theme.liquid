@@ -19,7 +19,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    
+
     <style>
     @font-face {
       font-family: "new-republic";
@@ -40,6 +40,7 @@
     }
   </style>
 
+    <script src="{{ 'ajax-cart.js' | asset_url }}" defer></script>
 
     {{ 'style.normalize.css' | asset_url | stylesheet_tag }}
     {{ 'style.base.css' | asset_url | stylesheet_tag }}
@@ -49,8 +50,9 @@
 
   <body class="gradient {% if template == 'index' %} home {% endif %}">
     {% section 'announcement-bar' %}
-
+    {% render 'background-overlay' %}
     {% section 'header' %}
+    {% section 'ajax-cart' %}
     
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}

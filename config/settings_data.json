@@ -139,8 +139,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/Vector.png",
-          "logo_width": 140,
+          "logo_width": 90,
           "menu": "main-menu"
         }
       },
@@ -199,20 +198,8 @@
         "settings": {
           "color_scheme": "background-1"
         }
-      },
-      "foter": {
-        "type": "foter",
-        "settings": {
-          "footer_logo": "shopify:\/\/shop_images\/Vector_1.png",
-          "social_icon": "shopify:\/\/shop_images\/Vector_2.png",
-          "product_type_menu": "",
-          "footer_menu": ""
-        }
       }
-    },
-    "content_for_index": [
-
-    ]
+    }
   },
   "presets": {
     "Default": {

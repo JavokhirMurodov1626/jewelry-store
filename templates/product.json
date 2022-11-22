@@ -8,13 +8,11 @@
     "product-followed-section": {
       "type": "section-product-followed",
       "settings": {
-        "section_bg_img": "shopify:\/\/shop_images\/BG-image.png"
       }
     },
     "product-recommandations": {
       "type": "product-recommandations",
       "settings": {
-        "title": "you might also like"
       }
     }
   },

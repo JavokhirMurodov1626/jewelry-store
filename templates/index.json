@@ -6,15 +6,13 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Amet.",
+            "heading": "Image banner",
             "heading_size": "h0"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
           }
         }
       },
@@ -23,7 +21,6 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/BackgroundImage-1_1.png",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -35,50 +32,21 @@
     "main-products-grid": {
       "type": "main-products-grid",
       "settings": {
-        "title": "jewelry that not only entices the eye  but enchants the soul",
-        "button_label": "shop all"
       }
     },
     "image_banner_empty": {
       "type": "image-banner-empty",
       "settings": {
-        "banner_img": "shopify:\/\/shop_images\/BackgroundImage-1_2.png"
       }
     },
     "featured-collection": {
       "type": "main-featured-collection",
-      "blocks": {
-        "7d7ebe41-e89b-4c52-a927-def1ccdf2d18": {
-          "type": "frame_image",
-          "settings": {
-            "frame_image": "shopify:\/\/shop_images\/DLT21_43_DGREGORY_12_Group_026_a_1.png"
-          }
-        },
-        "45e100a4-8643-407f-a8d6-4e510a351f5c": {
-          "type": "frame_content",
-          "settings": {
-            "frame_title": "jewelry that not only entices the eye  but enchants the soul",
-            "frame_text": "Convallis ac faucibus maecenas blandit elit. Placerat tellus fermentum in amet ac vitae, justo, pellentesque. Diam massa neque, blandit proin dapibus nec.",
-            "frame_button_label": "Shop the collection",
-            "frame_button_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "7d7ebe41-e89b-4c52-a927-def1ccdf2d18",
-        "45e100a4-8643-407f-a8d6-4e510a351f5c"
-      ],
       "settings": {
       }
     },
     "main-sign-up-section": {
       "type": "main-sign-up-section",
       "settings": {
-        "section_bg_img": "shopify:\/\/shop_images\/BackgroundImage-1_3_1.png",
-        "form_label": "Lorem ipsum dolor sit amet consectetur adipiscing.",
-        "form_placeholder": "Enter your Email",
-        "form_button_label": "Sign up",
-        "form_button_url": ""
       }
     }
   },
