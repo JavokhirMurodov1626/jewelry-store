@@ -29,7 +29,7 @@
                
         </div>
         <div class="button-wrap">
-            {% render 'button-primary', title:{{section.settings.button_label}} %}
+            {% render 'button-primary', title: section.settings.button_label %}
         </div>
     </div>
 </div>
@@ -61,4 +61,13 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'button-primary', title:{{section.settings.button_label}} %}"
+  to: "{% render 'button-primary', title: section.settings.button_label %}"
+  position: 1369..1436
+{%- endcomment -%}

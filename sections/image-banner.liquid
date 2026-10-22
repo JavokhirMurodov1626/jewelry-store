@@ -38,7 +38,7 @@
             </h1>
           {%- when 'buttons' -%}
              
-                {% render 'button-primary',link:{{ block.settings.button_link }}, title:"all collection" %}
+                {% render 'button-primary', link: nil, title: "all collection" %}
              
         {%- endcase -%}
       {%- endfor -%}
@@ -222,3 +222,14 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{% render ''button-primary'',link:{{ block.settings.button_link }}, title:"all
+    collection" %}'
+  to: '{% render ''button-primary'', link: nil, title: "all collection" %}'
+  position: 2501..2566
+{% endcomment %}

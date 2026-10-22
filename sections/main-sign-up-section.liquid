@@ -7,7 +7,7 @@
                 <label for="email" class="form-label h2">{{ section.settings.form_label }}</label>
                 <input class="h2" type="email" id="email" placeholder="{{ section.settings.form_placeholder }}">
                 <div class="form-button">
-                    {% render "button-primary", title:{{section.settings.form_button_label}}, link: {{section.settings.form_button_url}} %}
+                    {% render "button-primary", title: section.settings.form_button_label, link: section.settings.form_button_url %}
                 </div>
             </form>
         </div>
@@ -55,4 +55,15 @@
   }
 ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{% render "button-primary", title:{{section.settings.form_button_label}},
+    link: {{section.settings.form_button_url}} %}'
+  to: '{% render "button-primary", title: section.settings.form_button_label, link:
+    section.settings.form_button_url %}'
+  position: 451..563
+{%- endcomment -%}

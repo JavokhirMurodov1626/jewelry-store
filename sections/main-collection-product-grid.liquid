@@ -117,8 +117,7 @@
         <div class="banner-content">
           <h3>{{banner_heading[forloop.index0]}}</h3>
 
-          {% render 'button-primary', title:{{banner_button_title[forloop.index0]}},
-          link:{{banner_button_link[forloop.index0]}} %}
+          {% render 'button-primary', title: banner_button_title[forloop.index0], link: banner_button_link[forloop.index0] %}
 
         </div>
       </div>
@@ -187,4 +186,16 @@
   } else {
     collectionHandle.value = location.pathname.split('/')[2];
   }
-</script>
+</script>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {% render 'button-primary', title:{{banner_button_title[forloop.index0]}},
+              link:{{banner_button_link[forloop.index0]}} %}
+  to: "{% render 'button-primary', title: banner_button_title[forloop.index0], link:
+    banner_button_link[forloop.index0] %}"
+  position: 6222..6337
+{%- endcomment -%}

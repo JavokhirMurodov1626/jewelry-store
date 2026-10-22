@@ -25,7 +25,7 @@
                                         {{block.settings.frame_text}}
                                     </p>
                                     <div class="frame__button">
-                                        {% render 'button-primary', title:{{block.settings.frame_button_label,link:{{block.settings.frame_button_url}}}} %}
+                                        {% render 'button-primary', title: block.settings.frame_button_label, link: block.settings.frame_button_url %}
                                     </div>
                                 </div>
                             </div>
@@ -84,4 +84,15 @@
      }
   ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'button-primary', title:{{block.settings.frame_button_label,link:{{block.settings.frame_button_url}}}}
+    %}"
+  to: "{% render 'button-primary', title: block.settings.frame_button_label, link:
+    block.settings.frame_button_url %}"
+  position: 1357..1467
+{%- endcomment -%}
